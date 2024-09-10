@@ -240,7 +240,7 @@ for event_num, frame in tqdm(enumerate(Metrica_df['Start Frame'][args.start_ev:a
 # tracking_frame = 1
 # attacking_team = 'Home'
 # fig,ax = mviz.plot_pitchcontrol_for_tracking( tracking_frame, tracking_home, tracking_away, attacking_team, PPCF[event_num], annotate=True )
-fig_dir = "./result"
+fig_dir = "./results"
 '''
 event_nums = range(args.start_ev,args.end_ev)
 event_num0 = 4
