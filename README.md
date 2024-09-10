@@ -1,5 +1,7 @@
 # USO (Ultimate Scoring Opportunity)
 
+This repository contains the implementation of “Space evaluation based on pitch control using drone video in Ultimate” to be presented at CASSIS. [[website](http://www.cascadiasports.com/)] The code supports the methods and experiments presented in the paper. [[ReserchGate](https://www.researchgate.net/publication/383879446_Space_evaluation_based_on_pitch_control_using_drone_video_in_Ultimate)]
+
 ## Video
 
 https://drive.google.com/drive/folders/13yr0bzPIdAkum4YztNkj-nxba5r5ohO-?usp=sharing
