@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 warnings.simplefilter('ignore')
 
-import third_party as thp
+#import third_party as thp
 import obso_player as obs
 
 
@@ -86,7 +86,7 @@ elif args.data == 'jleague':
 
     # set event data
     sample_game_data = pd.read_csv(Jdata_FM+game_date[game_id]+event_data_name, encoding="shift_jis")
-    sample_spadl = thp.convert_J2spadl(sample_game_data)
+    #sample_spadl = thp.convert_J2spadl(sample_game_data)
 
     # set tracking data
     tracking_home = pd.read_csv(Jdata_FM+game_date[game_id]+'/home_tracking.csv')
@@ -240,7 +240,7 @@ for event_num, frame in tqdm(enumerate(Metrica_df['Start Frame'][args.start_ev:a
 # tracking_frame = 1
 # attacking_team = 'Home'
 # fig,ax = mviz.plot_pitchcontrol_for_tracking( tracking_frame, tracking_home, tracking_away, attacking_team, PPCF[event_num], annotate=True )
-fig_dir = "./figure/"+args.data_type if not args.data == 'rdd' else ''
+fig_dir = "./result"
 '''
 event_nums = range(args.start_ev,args.end_ev)
 event_num0 = 4
@@ -256,9 +256,7 @@ print(f"OBSO figures were saved at {fig_dir}/OBSO.")
 '''
 np.save(f'./assets/{args.id}/PPCF_{args.id}', PPCF)
 np.save(f'./assets/{args.id}/discholder_{args.id}', removed_players)
-#tracking_home.to_csv(f'data/data0/tracking_home/_{args.id}')
-#tracking_away.to_csv(f'data/data0/tracking_away/_{args.id}')
+tracking_home.to_csv(f'./assets/{args.id}/tracking_home_{args.id}')
+tracking_away.to_csv(f'./assets/{args.id}/tracking_away_{args.id}')
 #np.savetxt(f'data/data0/event/_{args.id}', Metrica_df, delimiter=',', fmt='%s')
-#mviz.save_match_clip_OBSO(tracking_home, tracking_away, PPCF, f"{fig_dir}/{args.data}", f"PPCF_{args.id}", frames_per_second=30, include_player_velocities=True, vmax=1.0, colorbar=True)
-fig,ax = mviz.plot_pitchcontrol_for_event(195, events,  tracking_home, tracking_away, PPCF[195], annotate=True, colorbar=True)
-fig.savefig(f'{fig_dir}/{args.data}/before.png')
+mviz.save_match_clip_OBSO(tracking_home, tracking_away, PPCF, f"{fig_dir}", f"PPCF_{args.id}", frames_per_second=30, include_player_velocities=True, vmax=1.0, colorbar=True)

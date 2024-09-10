@@ -226,10 +226,12 @@ else:
         weight = area * distance
         USO[i] = PPCF[i] * weight
 
+    USO /= USO.max()
+
     print(f'{file_name}')
     fig_dir = "./results"
     #mviz.save_match_clip_OBSO(tracking_home, tracking_away, PPCF, f"{fig_dir}/{args.data}", f"_PPCF_{file_name}", frames_per_second=30, include_player_velocities=True, vmax=1.0, colorbar=True)
-    mviz.save_match_clip_OBSO(tracking_home, tracking_away, USO, f"{fig_dir}", f"__USO_{file_name}", frames_per_second=30, include_player_velocities=True, vmax=1.0, colorbar=True, cm='Blues')
+    mviz.save_match_clip_OBSO(tracking_home, tracking_away, USO, f"{fig_dir}", f"USO_{file_name}", frames_per_second=30, include_player_velocities=True, vmax=1.0, colorbar=True, cm='Blues')
     #fig,ax = mviz.plot_pitchcontrol_for_event(args.frame, events,  tracking_home, tracking_away, USO[args.frame], annotate=True, colorbar=True)
     #fig.savefig(f'{fig_dir}/{args.data}/uso_{args.id}_{args.frame}.png')
 
