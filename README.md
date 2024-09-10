@@ -36,7 +36,7 @@ $ pip install -r requirements.txt
 1. Calculate and visualize OBSO
 
 ```bash
-$ python calculate_obso.py
+$ python calculate_obso.py --id 1_1_00
 ```
 
 2. Calculate and visualize USO
