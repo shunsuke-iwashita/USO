@@ -1,17 +1,11 @@
 # USO (Ultimate Scoring Opportunity)
 
----
-
 ## Video
-
----
 
 https://drive.google.com/drive/folders/13yr0bzPIdAkum4YztNkj-nxba5r5ohO-?usp=sharing
 
 
 ## Overview
-
----
 
 This repository contains the following:
 
@@ -20,8 +14,6 @@ This repository contains the following:
 - Code to calculate OBSO and USO
 
 ## Getting Started
-
----
 
 ### Installation
 
@@ -52,8 +44,6 @@ $ python calculate_uso.py
 ```
 
 ## Contact
-
----
 
 If you have any questions, please contact author:
 
