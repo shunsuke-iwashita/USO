@@ -31,7 +31,7 @@ This repository contains the following:
 $ git clone https://github.com/shunsuke-iwashita/USO.git
 ```
 
-1. Create environment:
+2. Create environment:
 
 ```bash
 $ pip install -r requirements.txt
@@ -45,7 +45,7 @@ $ pip install -r requirements.txt
 $ python calculate_obso.py
 ```
 
-1. Calculate and visualize USO
+2. Calculate and visualize USO
 
 ```bash
 $ python calculate_uso.py
